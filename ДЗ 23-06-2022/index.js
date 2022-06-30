@@ -45,7 +45,7 @@ const cats = [
     console.log(cats);
   }
   
-//   setFavoriteById('1', true)
+  setFavoriteById('1', true)
   
   function toggleFavoriteById(id) {
     for (let i = 0; i < cats.length; i++) {
@@ -56,4 +56,4 @@ const cats = [
     console.log(cats);
   }
   
-  toggleFavoriteById('2',)
+//   toggleFavoriteById('2',)
