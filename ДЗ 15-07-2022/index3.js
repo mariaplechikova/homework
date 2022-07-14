@@ -14,14 +14,12 @@ function FavoriyeList() {
   const [foods, setFoods] = useState(["Пицца", "Суши", "Пирожки"]);
 
   function addFood() {
-    setFoods(foods.concat(['Хлеб']));
-    console.log(foods);
+    setFoods(foods.concat(["Хлеб"]));
   }
 
   function removeFood() {
-    setFoods(foods.pop());
-    console.log(foods);
-    return foods
+    const newFoods = foods.filter((food, index) => index !== (foods.length - 1))
+    setFoods(newFoods)
   }
 
   return (
