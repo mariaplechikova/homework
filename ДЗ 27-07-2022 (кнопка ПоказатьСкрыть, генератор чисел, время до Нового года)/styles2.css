@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.colors {
+  display: flex;
+  width: 700px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.colors div {
+  height: 200px;
+  width: 200px;
+}
+
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
+}
+.red {
+  background-color: red;
+}
+.grey {
+  background-color: grey;
+}
