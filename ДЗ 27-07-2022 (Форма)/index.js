@@ -5,6 +5,7 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 import "./styles.css";
+import Massege from "./Massege";
 
 root.render(
   <div>
@@ -13,34 +14,51 @@ root.render(
 );
 
 function Form() {
-  const [hideTrue, getHideTrue] = useState(false);
-  const [hideFalse, getHideFalse] = useState(false);
+
+  const [inputLogin, getinputLogin] = useState(null);
+  const [inputPass, getinputPass] = useState(null);
+  const [displayTrue, getDisplayTrue] = useState("none");
+  const [displayFalse, getDisplayFalse] = useState("none");
 
   function check() {
     event.preventDefault();
-    const login = document.querySelector(".login").value;
-    const password = document.querySelector(".password").value;
-    
-    getHideTrue(false)
-    getHideFalse(false)
-
-    login === "admin" && password === "password" ? getHideTrue(true) : getHideFalse(true)
+    getDisplayTrue('none')
+    getDisplayFalse('none')
+   
+    inputLogin === "admin" && inputPass === "password"
+      ? getDisplayTrue("block")
+      : getDisplayFalse("block");
   }
 
   return (
     <div className={"content"}>
+
       <form>
-        Login: <input type="text" className="login"></input>
-        Password: <input type="password" className="password"></input>
+       
+        Login:
+        
+        <input
+          type="text"
+          className="login"
+          value={inputLogin}
+          onChange={(e) => getinputLogin(e.target.value)}
+        ></input>
+        
+        Password:
+        
+        <input
+          type="password"
+          className="password"
+          value={inputPass}
+          onChange={(e) => getinputPass(e.target.value)}
+        ></input>
+        
         <button onClick={check}>Войти</button>
+      
       </form>
 
-      <div className="true" style={{ display: hideTrue ? 'block' : 'none' }}>
-        Логин и пароль верные
-      </div>
-      <div className={"false"} style={{ display: hideFalse ? 'block' : 'none'}}>
-        Логин и пароль неверные
-      </div>
+      <Massege displayGreen={displayTrue} displayRed={displayFalse} />
+
     </div>
   );
 }
