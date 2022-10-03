@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  position: relative;
+}
+
+div {
+  height: 50px;
+  width: 50px;
+}
+
+.green {
+  background-color: green;
+  position: absolute;
+  left: 15px;
+}
+.yellow {
+  background-color: yellow;
+  position: absolute;
+  left: 75px;
+}
+.red {
+  background-color: red;
+  position: absolute;
+  left: 135px;
+}

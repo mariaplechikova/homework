@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: lemonchiffon;
+}
+
+th,
+td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 10px 20px;
+}
